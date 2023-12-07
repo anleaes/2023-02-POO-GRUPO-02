@@ -10,6 +10,8 @@ pass.txt
 /apps/locations/migrations/*
 /apps/materials/__pycache__/*
 /apps/materials/migrations/*
+/apps/materials_used/__pycache__/*
+/apps/materials_used/migrations/*
 /apps/ratings/__pycache__/*
 /apps/ratings/migrations/*
 /apps/solicitations/__pycache__/*
