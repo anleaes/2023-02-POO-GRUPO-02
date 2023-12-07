@@ -1,6 +1,5 @@
 db.sqlite3
 pass.txt
-.env
 /grupo2app/__pycache__/*
 /grupo2app/migrations/*
 /apps/contribuitors/__pycache__/*
