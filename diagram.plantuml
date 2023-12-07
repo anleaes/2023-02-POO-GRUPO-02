@@ -1,0 +1,76 @@
+@startuml Urban
+
+class Responsavel{
+ nome: String
+ cargo: String
+ telefone: Integer
+ endereco: String
+}
+
+class Contribuinte{
+ nome: String
+ telefone: Integer
+ endereco: String
+}
+
+class Requisicao{
+ contrtibuinte: Contribuinte
+ localizacao: Localizacao
+ descricao: String
+ data: DataType
+}
+
+class Servico{
+ requisicao: Requisicao
+ orgao: Orgao
+ responsavel: Responsavel
+ descricao: String
+ data : DataType
+ status: String
+}
+
+class Orgao{
+ nome : String
+ tipo : String
+ email : EmailForm
+ telefone : Integer
+ endereco : String
+}
+
+class Avaliacao{
+ contribuinte: Contribuinte
+ servico: Servico
+ nota: Integer
+ comentarios: String
+}
+
+class Localizacao{
+ rua: String
+ bairro: String
+ cidade: String 
+ cep: Integer
+}
+
+class Material{
+ nome : String
+ tipo :String
+}
+
+class MaterialUtilizado{
+ material: Material
+ servico: Servico
+ qtd : Integer
+ medida: String
+}
+
+Requisicao *-- Contribuinte
+Requisicao*-- Localizacao
+Servico *-- Requisicao
+Servico*-- Orgao
+Servico *-- Responsavel
+MaterialUtilizado*-- Material
+MaterialUtilizado*-- Servico
+Avaliacao*--Contribuinte
+Avaliacao *-- Servico
+
+@enduml
