@@ -1,9 +1,9 @@
-from .models import Location
+from .models import Supervisor
 from rest_framework import serializers
 
-class LocationSerializer(serializers.ModelSerializer):
+class SupervisorSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Location
+        model = Supervisor
         fields = '__all__'
         
-        
+    

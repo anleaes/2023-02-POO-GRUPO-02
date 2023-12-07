@@ -1,15 +1,17 @@
 from django.db import models
 
-class Location(models.Model):
-    rua = models.CharField(max_length=50)
-    bairro = models.CharField(max_length=50)
-    cidade = models.CharField(max_length=50)
-    cep = models.CharField(max_length=10)
+# Create your models here.
+
+class Supervisor(models.Model):
+    nome = models.CharField(max_length=50)
+    cargo = models.CharField(max_length=50)
+    telefone = models.IntegerField()
+    endereco = models.CharField(max_length=50)
     
     class Meta:
-        verbose_name = 'Localizacao'
-        verbose_name_plural = 'Localizacoes'
+        verbose_name = 'Supervisor'
+        verbose_name_plural = 'Supervisores'
         ordering =['id']
 
     def __str__(self):
-        return self.rua
+        return self.nome

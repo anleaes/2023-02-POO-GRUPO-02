@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from .models import Location
+from .models import Supervisor
 from rest_framework import viewsets
-from .serializer import LocationSerializer
+from .serializer import SupervisorSerializer
 
-# Após o comentario "# Create your views here." e crie as views "Category".
+# Após o comentario "# Create your views here." e crie as views "Supervisor".
 
-class LocationViewSet(viewsets.ModelViewSet):
-    queryset = Location.objects.all()
-    serializer_class = LocationSerializer 
+class SupervisorViewSet(viewsets.ModelViewSet):
+    queryset = Supervisor.objects.all()
+    serializer_class = SupervisorSerializer  
