@@ -1,5 +1,4 @@
 db.sqlite3
-.env
 /grupo2app/__pycache__/*
 /grupo2app/migrations/*
 /grupo2app/__pycache__/*
